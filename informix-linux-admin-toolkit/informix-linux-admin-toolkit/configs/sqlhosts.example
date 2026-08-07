@@ -1,0 +1,4 @@
+# Example only. 192.0.2.0/24 is reserved for documentation.
+# <dbservername> <nettype> <hostname> <servicename>
+
+ol_demo    onsoctcp    192.0.2.10    9088
