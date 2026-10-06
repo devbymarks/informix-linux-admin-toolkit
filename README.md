@@ -2,7 +2,11 @@
 
 > Toolkit educacional e de portfólio para administração do IBM Informix em ambientes Linux, com foco em instalação, configuração, armazenamento, logs, backup e troubleshooting.
 
-[Linux](https://camo.githubusercontent.com/74208acd9a5229cd77499d9c13ef33223b59f12c65329482e19cf4777157656e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e75782d41646d696e697374726174696f6e2d4643433632343f7374796c653d666c61742d737175617265266c6f676f3d6c696e7578266c6f676f436f6c6f723d626c61636b) [IBM Informix](https://camo.githubusercontent.com/3fae297fd79776d10332d4aae1bc4bb51cbf6bf6a4c1b267e29e9520a05f3123/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f49424d2d496e666f726d69782d3035324641443f7374796c653d666c61742d737175617265266c6f676f3d69626d266c6f676f436f6c6f723d7768697465) [Shell Script](https://camo.githubusercontent.com/f03310c3f4ee21d88023a18e11e3cf128e16c811a2903d18ab1d4a91e604e58e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5368656c6c2d426173682532302532462532304b6f726e5368656c6c2d3445414132353f7374796c653d666c61742d737175617265266c6f676f3d676e752d62617368266c6f676f436f6c6f723d7768697465) [SQL](https://camo.githubusercontent.com/d374ae0dba5bc39dc18fc21a85ed463cbe9a40dab79875b90a4448f7667d952d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f44617461626173652d53514c2d3333363739313f7374796c653d666c61742d737175617265) [License](https://camo.githubusercontent.com/ac049ef4e7a0b7196b09add6ac2d4f180e544c0ac779c2b2ac2fd2723a209579/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75653f7374796c653d666c61742d737175617265)
+[Linux](https://www.linux.org/) ([image](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black))
+[IBM Informix](https://www.ibm.com/products/informix) ([image](https://img.shields.io/badge/IBM%20Informix-052FAD?style=flat-square&logo=ibm&logoColor=white))
+[Shell Script](https://www.gnu.org/software/bash/) ([image](https://img.shields.io/badge/Shell--Script-Bash-121011?logo=gnu-bash&logoColor=white))
+[SQL](https://www.mysql.com/) ([image](https://img.shields.io/badge/Database-SQL-336791?style=flat-square))
+[License](https://opensource.org/license/mit/) ([image](https://img.shields.io/badge/license-MIT-blue?style=flat-square))
 
 ## 📌 Sobre o projeto
 
