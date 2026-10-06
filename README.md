@@ -331,8 +331,6 @@ Projeto desenvolvido como material de estudo, documentação técnica e portfól
 
 Se este projeto foi útil para você, considere deixar uma ⭐ no repositório.
 
-Se quiser contribuir com melhorias, documentação ou novas rotinas, fique à vontade para abrir uma **Issue** ou enviar um **Pull Request**.
-
 ---
 
 ## 📄 Licença
