@@ -325,7 +325,7 @@ Próximas evoluções planejadas:
 
 ## 👨‍💻 Autor
 
-**Matheus Barcelli**
+**Matheus Marks**
 
 Projeto desenvolvido como material de estudo, documentação técnica e portfólio na área de **Linux, infraestrutura, banco de dados e automação**.
 
