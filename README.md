@@ -2,11 +2,11 @@
 
 > Toolkit educacional e de portfólio para administração do IBM Informix em ambientes Linux, com foco em instalação, configuração, armazenamento, logs, backup e troubleshooting.
 
-[Linux](https://www.linux.org/) ([image](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black))
-[IBM Informix](https://www.ibm.com/products/informix) ([image](https://img.shields.io/badge/IBM%20Informix-052FAD?style=flat-square&logo=ibm&logoColor=white))
-[Shell Script](https://www.gnu.org/software/bash/) ([image](https://img.shields.io/badge/Shell--Script-Bash-121011?logo=gnu-bash&logoColor=white))
-[SQL](https://www.mysql.com/) ([image](https://img.shields.io/badge/Database-SQL-336791?style=flat-square))
-[License](https://opensource.org/license/mit/) ([image](https://img.shields.io/badge/license-MIT-blue?style=flat-square))
+[![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://www.linux.org/)
+[![IBM Informix](https://img.shields.io/badge/IBM%20Informix-052FAD?style=flat-square&logo=ibm&logoColor=white)](https://www.ibm.com/products/informix)
+[![Shell Script](https://img.shields.io/badge/Shell%20Script-Bash-121011?style=flat-square&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![SQL](https://img.shields.io/badge/Database-SQL-336791?style=flat-square)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://opensource.org/license/mit/)
 
 ## 📌 Sobre o projeto
 
