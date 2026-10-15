@@ -1,110 +1,97 @@
 # 🐧 IBM Informix Linux Administration Toolkit
 
-> Toolkit educacional e de portfólio para administração do IBM Informix em ambientes Linux, com foco em instalação, configuração, armazenamento, logs, backup e troubleshooting.
+> Toolkit de administração do IBM Informix em ambientes Linux, com foco em instalação, configuração, armazenamento, logs, backup e troubleshooting.
 
-[Linux](https://www.linux.org/) ([image](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black))
-[IBM Informix](https://www.ibm.com/products/informix) ([image](https://img.shields.io/badge/IBM%20Informix-052FAD?style=flat-square&logo=ibm&logoColor=white))
-[Shell Script](https://www.gnu.org/software/bash/) ([image](https://img.shields.io/badge/Shell--Script-Bash-121011?logo=gnu-bash&logoColor=white))
-[SQL](https://www.mysql.com/) ([image](https://img.shields.io/badge/Database-SQL-336791?style=flat-square))
-[License](https://opensource.org/license/mit/) ([image](https://img.shields.io/badge/license-MIT-blue?style=flat-square))
 [![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://www.linux.org/)
 [![IBM Informix](https://img.shields.io/badge/IBM%20Informix-052FAD?style=flat-square&logo=ibm&logoColor=white)](https://www.ibm.com/products/informix)
-[![Shell Script](https://img.shields.io/badge/Shell%20Script-Bash-121011?style=flat-square&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![Shell Script](https://img.shields.io/badge/Shell%20Script-Bash-121011?style=flat-square&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
 [![SQL](https://img.shields.io/badge/Database-SQL-336791?style=flat-square)](https://www.postgresql.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://opensource.org/license/mit/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://opensource.org/license/mit/)
+
+---
 
 ## 📌 Sobre o projeto
 
-O **IBM Informix Linux Administration Toolkit** reúne procedimentos, scripts e exemplos de configuração utilizados para estudar e padronizar tarefas de administração do IBM Informix em Linux.
+O **IBM Informix Linux Administration Toolkit** reúne procedimentos, scripts e exemplos de configuração para apoiar tarefas de administração do IBM Informix em ambientes Linux.
 
-O projeto foi organizado a partir de experiências práticas de administração de servidores, transformando procedimentos operacionais em uma base reutilizável para **laboratório, estudos, documentação técnica e portfólio profissional**.
+O projeto foi organizado a partir de experiências práticas com administração de servidores, transformando procedimentos operacionais em uma base reutilizável para consulta, padronização e evolução de rotinas técnicas.
 
 ### 🎯 Objetivos
 
-- documentar uma instalação de Informix em Linux;
-- organizar configurações de ambiente, `ONCONFIG` e `sqlhosts`;
-- demonstrar a criação e organização de dbspaces e chunks;
-- trabalhar com Physical Log e Logical Logs;
-- automatizar um backup nível 0 com `ontape`;
-- gerar informações úteis para diagnóstico e capacidade;
-- centralizar comandos de troubleshooting;
-- manter exemplos sanitizados e seguros para publicação no GitHub.
+- Documentar uma instalação do Informix em Linux;
+- Organizar configurações de ambiente, `ONCONFIG` e `sqlhosts`;
+- Demonstrar a criação e a organização de dbspaces e chunks;
+- Trabalhar com Physical Log e Logical Logs;
+- Automatizar um backup nível 0 com `ontape`;
+- Gerar informações úteis para diagnóstico e análise de capacidade;
+- Centralizar comandos de troubleshooting;
+- Manter exemplos sanitizados e seguros para publicação no GitHub.
 
-> **Importante:** este repositório não é um instalador do IBM Informix nem substitui a documentação oficial da versão utilizada. Os arquivos foram preparados como material de estudo e referência.
+> **Importante:** este repositório não é um instalador do IBM Informix nem substitui a documentação oficial da versão utilizada. Revise os exemplos e adapte-os ao ambiente antes de executar.
 
 ---
 
 ## 📚 O que você encontra aqui
 
-| **Área**        | **Conteúdo**                                             |
-| --------------- | -------------------------------------------------------- |
-| Instalação      | Preparação do Linux, usuário, diretórios e ambiente      |
-| Configuração    | Variáveis, `ONCONFIG` e `sqlhosts`                       |
-| Storage         | Chunks, dbspaces, Physical Log, Logical Log e temporário |
-| Backup          | Backup nível 0 com `ontape` e inventário da instância    |
-| Automação       | Scripts Bash/KornShell para rotinas administrativas      |
-| Monitoramento   | Comandos `onstat` e relatório de extents                 |
-| Troubleshooting | Diagnóstico de status, logs, permissões e armazenamento  |
-| SQL             | Rotina administrativa para SysAdmin                      |
-| Segurança       | Sanitização de dados antes da publicação                 |
+| Área | Conteúdo |
+| --- | --- |
+| Instalação | Preparação do Linux, usuário, diretórios e ambiente |
+| Configuração | Variáveis, `ONCONFIG` e `sqlhosts` |
+| Storage | Chunks, dbspaces, Physical Log, Logical Log e espaço temporário |
+| Backup | Backup nível 0 com `ontape` e inventário da instância |
+| Automação | Scripts Bash/KornShell para rotinas administrativas |
+| Monitoramento | Comandos `onstat` e relatório de extents |
+| Troubleshooting | Diagnóstico de status, logs, permissões e armazenamento |
+| SQL | Rotina administrativa para SysAdmin |
+| Segurança | Sanitização de dados antes da publicação |
 
 ---
 
 ## 🏗️ Arquitetura de referência
 
-```
+```text
 Linux Server
-│
 └── IBM Informix
-    │
-    ├── rootdbs
-    ├── dbs_plog       → Physical Log
-    ├── dbs_log        → Logical Logs
-    ├── dbs_temp       → Operações temporárias
-    ├── dbs_data       → Dados da aplicação
-    └── dbs_sysadmin   → Banco administrativo
+    ├── rootdbs       → Estruturas essenciais da instância
+    ├── dbs_plog      → Physical Log
+    ├── dbs_log       → Logical Logs
+    ├── dbs_temp      → Operações temporárias
+    ├── dbs_data      → Dados da aplicação
+    └── dbs_sysadmin  → Banco administrativo
 
 Rotinas
-│
 ├── Configuração
 ├── Backup Level 0
 ├── Relatório de extents
 ├── Administração de logical logs
 └── Troubleshooting
-
 ```
 
 ---
 
 ## 📂 Estrutura do repositório
 
-```
+```text
 informix-linux-admin-toolkit/
-│
 ├── README.md
 ├── LICENSE
 ├── SECURITY.md
 ├── .gitignore
-│
 ├── configs/
 │   ├── informix.env.example
 │   ├── onconfig.project.example
 │   └── sqlhosts.example
-│
 ├── docs/
 │   ├── 01-INSTALLATION.md
 │   ├── 02-STORAGE-AND-LOGS.md
 │   ├── 03-BACKUP.md
 │   └── 04-TROUBLESHOOTING.md
-│
 ├── scripts/
 │   ├── backup_level0.sh
 │   ├── create_logical_logs.sh
 │   └── extents_report.ksh
-│
 └── sql/
     └── reset_sysadmin.sql
-
 ```
 
 A numeração dos documentos indica uma ordem recomendada de leitura e execução.
@@ -113,7 +100,7 @@ A numeração dos documentos indica uma ordem recomendada de leitura e execuçã
 
 ## 🔄 Fluxo recomendado
 
-```
+```text
 01. Preparar Linux
        ↓
 02. Instalar Informix
@@ -130,25 +117,24 @@ A numeração dos documentos indica uma ordem recomendada de leitura e execuçã
        ↓
 08. Executar backup
        ↓
-09. Monitorar / diagnosticar
-
+09. Monitorar e diagnosticar
 ```
 
 ### 📦 1. Instalação
 
-Comece por [`docs/01-INSTALLATION.md`](https://github.com/devbymarks/informix-linux-admin-toolkit/blob/main/docs/01-INSTALLATION.md).
+Comece por [`docs/01-INSTALLATION.md`](docs/01-INSTALLATION.md).
 
 ### 💾 2. Storage e logs
 
-Depois, consulte [`docs/02-STORAGE-AND-LOGS.md`](https://github.com/devbymarks/informix-linux-admin-toolkit/blob/main/docs/02-STORAGE-AND-LOGS.md).
+Consulte [`docs/02-STORAGE-AND-LOGS.md`](docs/02-STORAGE-AND-LOGS.md).
 
 ### 💾 3. Backup
 
-Para a rotina de backup, consulte [`docs/03-BACKUP.md`](https://github.com/devbymarks/informix-linux-admin-toolkit/blob/main/docs/03-BACKUP.md).
+Para a rotina de backup, consulte [`docs/03-BACKUP.md`](docs/03-BACKUP.md).
 
 ### 🛠️ 4. Troubleshooting
 
-Em caso de problema, utilize [`docs/04-TROUBLESHOOTING.md`](https://github.com/devbymarks/informix-linux-admin-toolkit/blob/main/docs/04-TROUBLESHOOTING.md).
+Em caso de problema, utilize [`docs/04-TROUBLESHOOTING.md`](docs/04-TROUBLESHOOTING.md).
 
 ---
 
@@ -158,9 +144,9 @@ Em caso de problema, utilize [`docs/04-TROUBLESHOOTING.md`](https://github.com/d
 
 Executa uma rotina de backup nível 0 usando `ontape`, registra informações da instância e cria snapshots dos arquivos de configuração selecionados.
 
-Exemplo:
+Exemplo de execução:
 
-```
+```bash
 BACKUP_DIR=/backup/ontape \
 LOG_FILE=/var/log/informix/backup_level0.log \
 ./scripts/backup_level0.sh
@@ -172,22 +158,21 @@ LOG_FILE=/var/log/informix/backup_level0.log \
 
 Automatiza a inclusão de logical logs em um dbspace.
 
-```
+```bash
 ./scripts/create_logical_logs.sh 95 dbs_log 20000
 ```
 
 Parâmetros:
 
-```
+```text
 <quantidade> [dbspace] [tamanho_kb]
-
 ```
 
 ### 📊 `extents_report.ksh`
 
 Gera um relatório de extents e utilização das tabelas de uma base Informix.
 
-```
+```bash
 ./scripts/extents_report.ksh demo_db > extents-demo_db.txt
 ```
 
@@ -195,37 +180,37 @@ Gera um relatório de extents e utilização das tabelas de uma base Informix.
 
 ## 🔎 Comandos de diagnóstico
 
-Verificar o estado da instância:
+**Verificar o estado da instância:**
 
-```
+```bash
 onstat -
 ```
 
-Ver usuários e sessões:
+**Ver usuários e sessões:**
 
-```
+```bash
 onstat -u
 ```
 
-Ver mensagens recentes:
+**Ver mensagens recentes:**
 
-```
+```bash
 onstat -m
 ```
 
-Ver dbspaces e chunks:
+**Ver dbspaces e chunks:**
 
-```
+```bash
 onstat -d
 ```
 
-Ver logical logs:
+**Ver logical logs:**
 
-```
+```bash
 onstat -l
 ```
 
-Esses comandos são referências rápidas; a interpretação da saída depende do estado da instância e da versão do Informix.
+Esses comandos são referências rápidas. A interpretação da saída depende do estado da instância e da versão do Informix.
 
 ---
 
@@ -249,37 +234,37 @@ Esses comandos são referências rápidas; a interpretação da saída depende d
 
 ## ✅ Pré-requisitos
 
-Para reproduzir o laboratório, você precisa de:
+Para reproduzir o ambiente, você precisa de:
 
-- um servidor Linux;
-- IBM Informix instalado por um meio autorizado/licenciado;
-- usuário administrativo para preparação do sistema;
-- usuário `informix` para as rotinas da instância;
-- espaço em disco suficiente para os chunks e backups;
-- conhecimento básico de Linux, shell e administração de banco de dados.
+- Um servidor Linux;
+- IBM Informix instalado por meio autorizado e devidamente licenciado;
+- Usuário administrativo para preparar o sistema;
+- Usuário `informix` para executar as rotinas da instância;
+- Espaço em disco suficiente para os chunks e backups;
+- Conhecimentos básicos de Linux, shell e administração de banco de dados.
 
-A referência histórica deste projeto utiliza **IBM Informix 11.70 FC7 em Linux 64 bits**. Comandos e parâmetros devem ser revisados antes de serem utilizados em versões diferentes.
+A referência histórica deste projeto utiliza **IBM Informix 11.70 FC7 em Linux 64 bits**. Revise comandos e parâmetros antes de utilizá-los em versões diferentes.
 
 ---
 
 ## 🔐 Segurança
 
-Este projeto foi sanitizado para publicação pública. **Não coloque no GitHub informações do ambiente real.**
+Este projeto foi preparado para publicação pública. **Não publique informações do ambiente real no GitHub.**
 
 Nunca publique:
 
-- senhas;
-- tokens ou chaves privadas;
+- Senhas;
+- Tokens ou chaves privadas;
 - IPs de ambientes reais quando não forem apropriados para divulgação;
-- dados de clientes;
-- dumps ou backups reais;
-- certificados privados;
-- arquivos completos de configuração de produção sem revisão;
-- instaladores proprietários.
+- Dados de clientes;
+- Dumps ou backups reais;
+- Certificados privados;
+- Arquivos completos de configuração de produção sem revisão;
+- Instaladores proprietários.
 
 Os exemplos deste repositório utilizam valores fictícios ou reservados para documentação, como `ol_demo` e `192.0.2.10`.
 
-Consulte [`SECURITY.md`](https://github.com/devbymarks/informix-linux-admin-toolkit/blob/main/SECURITY.md) antes de publicar alterações.
+Consulte [`SECURITY.md`](SECURITY.md) antes de publicar alterações.
 
 ---
 
@@ -289,25 +274,25 @@ Algumas operações administrativas do Informix podem alterar estruturas crític
 
 Por exemplo:
 
-```
+```bash
 oninit -i
 ```
 
 A inicialização com `-i` deve ser usada somente em uma instância nova e após confirmar `INFORMIXSERVER`, `ONCONFIG`, `ROOTPATH` e o plano de recuperação.
 
-**Nunca execute comandos destrutivos em produção apenas copiando exemplos deste repositório.**
+**Nunca execute comandos potencialmente destrutivos em produção apenas copiando exemplos deste repositório.**
 
 ---
 
 ## 🛡️ Boas práticas adotadas
 
-- exemplos separados dos arquivos reais de ambiente;
-- nenhum segredo armazenado no código;
-- permissões mais restritivas nos exemplos de backup;
-- documentação organizada por etapa;
-- scripts com validação básica de variáveis e comandos;
-- nomes de hosts e endereços sanitizados;
-- alertas explícitos para operações destrutivas;
+- Exemplos separados dos arquivos reais de ambiente;
+- Nenhum segredo armazenado no código;
+- Permissões restritivas nos exemplos de backup;
+- Documentação organizada por etapa;
+- Scripts com validação básica de variáveis e comandos;
+- Nomes de hosts e endereços sanitizados;
+- Alertas explícitos para operações destrutivas;
 - `.gitignore` para evitar o versionamento de arquivos gerados.
 
 ---
@@ -329,11 +314,12 @@ Próximas evoluções planejadas:
 ---
 
 ## 👨‍💻 Autor
-Matheus Marks
+
+**Matheus Marks**
 
 Projeto desenvolvido a partir da experiência prática com administração de servidores Linux, banco de dados IBM Informix, automação de rotinas operacionais, backups e troubleshooting de infraestrutura.
 
-O toolkit representa a organização de procedimentos e ferramentas utilizados em atividades profissionais, com foco em padronização, manutenção e eficiência operacional.
+O toolkit organiza procedimentos e ferramentas utilizados em atividades técnicas, com foco em padronização, manutenção e eficiência operacional.
 
 ---
 
@@ -347,4 +333,4 @@ Se este projeto foi útil para você, considere deixar uma ⭐ no repositório.
 
 Este projeto está disponível sob a licença **MIT**.
 
-IBM e Informix são marcas de seus respectivos proprietários. Este é um projeto independente, educacional e de portfólio, sem vínculo oficial com a IBM.
+IBM e Informix são marcas de seus respectivos proprietários. Este é um projeto independente, sem vínculo oficial com a IBM.
